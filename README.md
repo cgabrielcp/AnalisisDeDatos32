@@ -14,4 +14,8 @@
 
 -- Crear Commit
 
+    git commit -m "Agregas un comentario"
+
 -- Empujar el Cambio
+
+    git push origin main
