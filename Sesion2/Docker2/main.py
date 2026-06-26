@@ -1,42 +1,26 @@
-
 from flask import Flask
 from flasgger import Swagger
-
-# Crear una instania de la clase Flask y con el nombre del modulo name
+ 
 app = Flask(__name__)
-
+ 
+# CONFIGURACIÓN CLAVE (esto arregla el error)
 app.config['SWAGGER'] = {
     'title': 'Mi API',
     'uiversion': 3
 }
  
 swagger = Swagger(app)
-
-# Ruta 1
+ 
 @app.route('/api/hello')
 def hello():
     """
-        Get Hello
-
-        Retorna mensaje de conexion
+    Endpoint de saludo
+    ---
+    responses:
+      200:
+        description: Retorna un mensaje de saludo
     """
-    return 'Hola Mundo desde Docker'
-
-# Ruta 1
-@app.route('/api/getData')
-def getData():
-    """
-        Get Hello
-
-        Retorna mensaje de conexion
-    """
-    resultado = "Data Obtenida"
-
-    return resultado
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-
-
-
+    return "Hola Mundo desde Docker"
+ 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
