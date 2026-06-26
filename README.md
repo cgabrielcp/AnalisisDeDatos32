@@ -49,3 +49,8 @@
 -- Eliminar una contenedor
 
     docker rm -f jupyter
+
+
+-- Instalar librerias
+
+    pip install -r requeriment.txt
