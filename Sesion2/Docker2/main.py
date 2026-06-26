@@ -1,8 +1,16 @@
 
 from flask import Flask
+from flasgger import Swagger
 
 # Crear una instania de la clase Flask y con el nombre del modulo name
 app = Flask(__name__)
+
+app.config['SWAGGER'] = {
+    'title': 'Mi API',
+    'uiversion': 3
+}
+ 
+swagger = Swagger(app)
 
 # Ruta 1
 @app.route('/api/hello')
