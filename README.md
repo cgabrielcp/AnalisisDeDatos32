@@ -19,3 +19,8 @@
 -- Empujar el Cambio
 
     git push origin main
+
+
+# Comandos Docker File
+Crear una imagen:
+    docker build -t jupyter_notebook .
