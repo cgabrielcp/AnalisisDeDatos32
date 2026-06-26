@@ -22,17 +22,22 @@
 
 
 # Comandos Docker File
-Crear una imagen:
+--  Crear una imagen:
+
     docker build -t jupyter_notebook .
 
-Listar las imagenes:
+--  Listar las imagenes:
+
     docker images
 
-Crear Contenedor:
+--  Crear Contenedor:
+
     docker run -d -p 8000:8888 --name jupyter jupyter_notebook
 
-Lista los contenedores:
+--  Lista los contenedores:
+
     Docker ps
 
-Log de ejecucion segundo plano:
+--  Log de ejecucion segundo plano:
+
     docker logs -f jupyter
