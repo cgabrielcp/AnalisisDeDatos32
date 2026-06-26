@@ -16,3 +16,10 @@ RUN echo "c.NotebookApp.token = ''" >> /root/.jupyter/jupyter_notebook_config.py
     echo "c.NotebookApp.password = ''" >> /root/.jupyter/jupyter_notebook_config.py && \
     echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config.py && \
     echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py
+
+
+# Puerto de exposicion
+EXPOSE 8888
+
+# Ejecucion de la aplicacio
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
