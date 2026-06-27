@@ -54,3 +54,8 @@
 -- Instalar librerias
 
     pip install -r requeriment.txt
+
+
+-- Levantar servidor MySQL
+
+    docker compose up
